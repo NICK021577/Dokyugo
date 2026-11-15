@@ -1,0 +1,10 @@
+{% load design %}
+<section class="page-banner {% if breadcrumb %}with-breadcrumb{% endif %} {% if banner_class %}{{ banner_class }}{% endif %}">
+  <div class="banner-inner">
+    {% if breadcrumb %}<p class="breadcrumb"><a href="{% url 'documents' %}">Documents</a> / {{ breadcrumb }}</p>{% endif %}
+    <h1>{{ heading }}</h1>
+    {% if subtitle %}<p class="banner-subtitle">{{ subtitle }}</p>{% endif %}
+  </div>
+  <img class="banner-wedge" src="{% asset banner_asset 'imgRedWedge' %}" alt="">
+  <img class="banner-sun" src="{% asset banner_asset 'imgSun' %}" alt="">
+</section>

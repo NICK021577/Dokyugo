@@ -1,0 +1,1 @@
+{% load design %}<section class="cta-band"><div><h2>{{ cta_title|default:'Ready when you are.' }}</h2>{% if not cta_short %}<p>Check your requirements before you leave home.</p>{% endif %}</div><a class="button" href="{% url 'book' %}">Book a slot <img src="{% asset 'home' 'imgIconArrow2' %}" alt=""></a></section>

@@ -1,0 +1,3 @@
+{% extends 'resident/base.html' %}
+{% block title %}Notifications · DokyuGo{% endblock %}
+{% block portal_content %}<div class="portal-heading"><h1>Notifications</h1><form method="post">{% csrf_token %}<button type="submit" class="button button-outline button-small">Mark all as read</button></form></div><div class="portal-panel">{% for notification in notifications %}<article class="notification-item {% if not notification.read %}unread{% endif %}"><a href="{% url 'ticket' notification.booking_id %}">{{ notification.text }}</a><small>{{ notification.created_at|date:'M j, Y · g:i A' }}</small></article>{% empty %}<div class="empty-state"><h2>You’re all caught up</h2><p>Booking confirmations and status updates will appear here.</p></div>{% endfor %}</div>{% endblock %}

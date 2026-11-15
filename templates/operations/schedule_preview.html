@@ -1,0 +1,1 @@
+{% if preview %}<div class="schedule-preview" role="status"><strong>{{ preview.total }} candidate appointment times</strong><p>Existing slots are retained and calendar exceptions are skipped when publishing.</p><ul>{% for moment in preview.first %}<li>{{ moment|date:'D, M j · g:i A' }}</li>{% endfor %}</ul></div>{% endif %}

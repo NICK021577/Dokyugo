@@ -1,0 +1,23 @@
+{% load static design %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3c62b8">
+  <meta name="description" content="Check barangay document requirements, book an appointment, and get your queue number with DokyuGo.">
+  <title>{% block title %}DokyuGo · Barangay document requests{% endblock %}</title>
+  <link rel="icon" type="image/svg+xml" href="{% asset 'home' 'imgLogoMark' %}">
+  <link rel="preload" href="{% static 'dokyugo/fonts/PublicSans.ttf' %}" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="{% static 'dokyugo/site.css' %}">
+  <script defer src="{% static 'dokyugo/site.js' %}"></script>
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% block header %}{% include 'includes/header.html' %}{% endblock %}
+  {% if messages %}<div class="messages" role="status" aria-live="polite">{% for message in messages %}<div class="notice {{ message.tags }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+  <main id="main">{% block content %}{% endblock %}</main>
+  {% block footer %}{% include 'includes/footer.html' %}{% endblock %}
+</body>
+</html>

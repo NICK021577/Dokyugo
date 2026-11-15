@@ -1,0 +1,3 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Reset your password · DokyuGo{% endblock %}
+{% block auth_content %}<form method="post" class="account-form" novalidate>{% csrf_token %}<h2>Reset your password</h2><p class="muted">Enter your mobile number or email. We will send a link to your account’s email address to choose a new password.</p>{% include 'includes/form.html' %}<button class="button full-width" type="submit">Send reset link</button><a href="{% url 'login' %}">Back to log in</a></form>{% endblock %}

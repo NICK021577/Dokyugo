@@ -1,0 +1,13 @@
+{% extends 'base.html' %}{% load design %}
+{% block title %}Documents · DokyuGo{% endblock %}
+{% block content %}
+{% include 'includes/banner.html' with heading='Official clearances, certifications and legal documents you can request' subtitle=catalogue_subtitle banner_asset='documents' banner_class='catalogue-banner' %}
+<div class="catalogue">
+  <form class="search-form" method="get" role="search"><label for="document-search" class="sr-only">Search documents</label>{% icon 'Search' %}<input id="document-search" type="search" name="q" placeholder="Search documents" value="{{ query }}"><button type="submit" class="sr-only">Search</button></form>
+  <nav class="jump-links" aria-label="Document groups">{% for group in groups %}<a href="#{{ group.key }}">{{ group.label }}</a>{% endfor %}</nav>
+  {% if query %}<p role="status">{{ count }} result{{ count|pluralize }} for “{{ query }}”. <a href="{% url 'documents' %}">Clear search</a></p>{% endif %}
+  {% for group in groups %}{% if group.documents %}<section class="document-group {{ group.key }}" id="{{ group.key }}"><div class="group-heading"><span class="group-marker" aria-hidden="true"></span><h2>{{ group.label }}</h2><p>{{ group.documents|length }} document{{ group.documents|length|pluralize }}</p></div><div class="document-rows">{% for doc in group.documents %}{% include 'includes/doc_row.html' %}{% endfor %}</div></section>{% endif %}{% endfor %}
+  {% if not count %}<div class="empty-state"><h2>No documents found</h2><p>Try another name, or browse all documents.</p><a href="{% url 'documents' %}">Show all documents</a></div>{% endif %}
+  <p class="catalogue-note">Some documents may need to be requested in person. The barangay confirms which can be booked here.</p>
+</div>
+{% endblock %}

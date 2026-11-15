@@ -1,0 +1,3 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Choose a new password · DokyuGo{% endblock %}
+{% block auth_content %}{% if validlink %}<form method="post" class="account-form" novalidate>{% csrf_token %}<h2>Choose a new password</h2>{% include 'includes/form.html' %}<button class="button full-width">Save new password</button></form>{% else %}<div class="account-form"><h2>This link has expired</h2><p>Please request a new password reset link.</p><a class="button" href="{% url 'password_reset' %}">Request a new link</a></div>{% endif %}{% endblock %}

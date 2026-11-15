@@ -1,0 +1,3 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Password updated · DokyuGo{% endblock %}
+{% block auth_content %}<div class="account-form"><h2>Your password is updated</h2><p>You can now log in with your new password.</p><a class="button" href="{% url 'login' %}">Log in</a></div>{% endblock %}

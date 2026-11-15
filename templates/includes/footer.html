@@ -1,0 +1,7 @@
+{% load design %}
+<div class="weave" aria-hidden="true"></div>
+<footer class="site-footer">
+  <div class="footer-copy">{% include 'includes/logo.html' %}<p>{{ barangay_name }} · {{ hall_address }}</p><p><strong>Salamat po!</strong></p></div>
+  <nav aria-label="Footer navigation"><a href="{% url 'documents' %}">Documents</a><a href="{% url 'how' %}">How it works</a><a href="{% url 'privacy' %}">Privacy notice</a><a href="{% url 'login' %}?next={% url 'staff' %}">Staff login</a></nav>
+  <img class="footer-sun" src="{% asset 'home' 'imgSun2' %}" alt="" loading="lazy">
+</footer>

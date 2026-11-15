@@ -1,0 +1,12 @@
+{% load static %}
+<div class="appointment-picker" data-appointment-picker hidden>
+  <div class="calendar-toolbar"><div><span class="eyebrow-small">APPOINTMENT DATE</span><h3 data-month-label aria-live="polite">Choose a date</h3></div><div class="calendar-controls"><button type="button" data-month-prev aria-label="Previous month">‹</button><button type="button" data-month-next aria-label="Next month">›</button></div></div>
+  <p class="calendar-status" data-calendar-status role="status" aria-live="polite">Loading appointment availability…</p>
+  <div class="calendar-weekdays" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+  <div class="calendar-grid" data-calendar-grid role="group" aria-label="Appointment dates"></div>
+  <div class="calendar-legend"><span><i></i>Available</span><span><i class="legend-selected"></i>Selected</span><span><i class="legend-unavailable"></i>Unavailable</span></div>
+  <div class="time-picker"><div class="time-heading"><div><span class="eyebrow-small">APPOINTMENT TIME</span><h3 data-time-date>Select an available day</h3></div><span class="timezone-label">Philippine time</span></div><div class="time-slots" data-time-slots role="group" aria-label="Appointment times"></div><p class="help">Remaining places update when you change months or select a time. Your place is reserved when you confirm.</p><button type="button" class="text-button" data-refresh-calendar>Refresh availability</button></div>
+</div>
+<div class="slot-fallback" data-slot-fallback>{% include 'includes/field.html' with field=form.slot %}</div>
+{{ picker|json_script:'appointment-config' }}
+<script defer src="{% static 'dokyugo/booking.js' %}"></script>

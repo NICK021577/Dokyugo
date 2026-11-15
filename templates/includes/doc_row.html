@@ -1,0 +1,1 @@
+{% load design %}<a class="document-row" href="{% url 'document_detail' doc.slug %}"><span class="icon-box {{ doc.group }}">{% icon doc.icon %}</span><span class="row-copy"><strong>{{ doc.name }}</strong>{% if not compact %}<span>{{ doc.description }}</span>{% endif %}</span>{% icon 'Arrow' %}</a>

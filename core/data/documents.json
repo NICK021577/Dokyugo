@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Barangay Clearance",
+    "description": "Proof of residency and good standing for job applications, NBI or police clearance, loans, bank accounts, or legal matters.",
+    "group": "clearances",
+    "icon": "Doc",
+    "position": 0
+  },
+  {
+    "name": "Barangay Business Clearance (Business Permit)",
+    "description": "Required before you can get a municipal or city business permit.",
+    "group": "clearances",
+    "icon": "Store",
+    "position": 1
+  },
+  {
+    "name": "Barangay Clearance for Building/Occupancy Permit",
+    "description": "Needed for construction, renovations, or property occupancy.",
+    "group": "clearances",
+    "icon": "Bld",
+    "position": 2
+  },
+  {
+    "name": "Tricycle / Pedicab / Transport Clearance",
+    "description": "For local transport operators and drivers.",
+    "group": "clearances",
+    "icon": "Truck",
+    "position": 3
+  },
+  {
+    "name": "Certificate of Residency",
+    "description": "Confirms your address and how long you have lived in the barangay.",
+    "group": "certifications",
+    "icon": "Home",
+    "position": 4
+  },
+  {
+    "name": "Certificate of Indigency",
+    "description": "Verifies low income or financial hardship, for medical, financial, or educational aid such as DSWD or PCSO assistance.",
+    "group": "certifications",
+    "icon": "Heart",
+    "position": 5
+  },
+  {
+    "name": "Certificate of Good Moral Character",
+    "description": "Confirms your community standing for scholarships, school enrollment, or employment.",
+    "group": "certifications",
+    "icon": "Award",
+    "position": 6
+  },
+  {
+    "name": "First-Time Job Seeker Certification",
+    "description": "Issued under Republic Act No. 11261 so you can get certain pre-employment government documents free.",
+    "group": "certifications",
+    "icon": "Bag",
+    "position": 7
+  },
+  {
+    "name": "Certificate of Solo Parent / Senior Citizen Certification",
+    "description": "A prerequisite for securing official ID cards.",
+    "group": "certifications",
+    "icon": "Users",
+    "position": 8
+  },
+  {
+    "name": "Certificate of No Objection (CNO)",
+    "description": "Approves local construction, tree-cutting, events, or specific community projects.",
+    "group": "certifications",
+    "icon": "Ok",
+    "position": 9
+  },
+  {
+    "name": "Barangay Blotter Certification",
+    "description": "Shows whether a person has a record or pending dispute in the barangay blotter.",
+    "group": "certifications",
+    "icon": "Doc",
+    "position": 10
+  },
+  {
+    "name": "Special Certifications",
+    "description": "Varies by local need, such as live-in/cohabitation, livestock, or death/attestation records.",
+    "group": "certifications",
+    "icon": "Star",
+    "position": 11
+  },
+  {
+    "name": "Katarungang Pambarangay Documents",
+    "description": "Notice of hearing, summons, or a Certification to File Action when a dispute cannot be settled at the barangay level.",
+    "group": "legal",
+    "icon": "Scale",
+    "position": 12
+  },
+  {
+    "name": "Barangay Protection Order (BPO)",
+    "description": "Issued in cases involving domestic or gender-based safety concerns.",
+    "group": "legal",
+    "icon": "Shield",
+    "position": 13
+  },
+  {
+    "name": "Barangay ID Card",
+    "description": "Local identification card for residents.",
+    "group": "legal",
+    "icon": "Id",
+    "position": 14
+  },
+  {
+    "name": "Community Tax Certificate (Cedula)",
+    "description": "Often issued or coordinated through barangay or municipal treasurers.",
+    "group": "legal",
+    "icon": "Doc1",
+    "position": 15
+  },
+  {
+    "name": "Barangay Records, Data, or Certified True Copies",
+    "description": "Copies of official resolutions, minutes, or barangay legislative acts.",
+    "group": "legal",
+    "icon": "Copy",
+    "position": 16
+  }
+]
